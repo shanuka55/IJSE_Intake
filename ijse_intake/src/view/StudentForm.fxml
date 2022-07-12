@@ -1,14 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.StudentFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="1026.0" layoutX="-13.0" layoutY="-2.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/blue_abstract_background_310971.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#597997" height="42.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="1014.0" />
+      <Label layoutX="37.0" layoutY="15.0" text="Add new Student" textFill="#ffc3c3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="113.0" text="Student Id         :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="171.0" text="Student Name  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="328.0" text="Address             :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="280.0" text="Contact             :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="387.0" text="NIC                   :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="homeId" fill="#d06060" glyphName="HOME" layoutX="933.0" layoutY="543.0" onMouseClicked="#backToHomeOnAction" size="50" />
+      <JFXTextField fx:id="txtStudentId" layoutX="244.0" layoutY="108.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentName" layoutX="246.0" layoutY="161.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentAddress" layoutX="246.0" layoutY="325.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentContact" layoutX="245.0" layoutY="273.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXTextField fx:id="txtStudentNIC" layoutX="249.0" layoutY="372.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXButton fx:id="backbtnId" layoutX="74.0" layoutY="489.0" onAction="#backToDashboardOnAction" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #d06060;" text="Back">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REPLY" size="20" wrappingWidth="39.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="updateBtnId" layoutX="687.0" layoutY="237.0" onAction="#UpdateStudentOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Update Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="25" wrappingWidth="38.428571701049805" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtnId" layoutX="688.0" layoutY="315.0" onAction="#DeleteBtnOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Delete Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#eb0000" glyphName="TRASH" size="25" wrappingWidth="46.64285659790039" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblTime" layoutX="437.0" layoutY="18.0" prefHeight="21.0" prefWidth="114.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="605.0" layoutY="18.0" prefHeight="21.0" prefWidth="395.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="checkStudentBtnId" layoutX="687.0" layoutY="394.0" onAction="#checkStudentOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Check Student " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="TABLE" size="25" wrappingWidth="38.428571701049805" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="77.0" layoutY="223.0" text="Student email  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtStudentEmail" layoutX="243.0" layoutY="217.0" prefHeight="31.0" prefWidth="254.0" />
+      <JFXButton fx:id="addBtnId" layoutX="686.0" layoutY="156.0" onAction="#addStudentOnAction" prefHeight="63.0" prefWidth="254.0" style="-fx-background-color: #597997;" text="Add Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>
