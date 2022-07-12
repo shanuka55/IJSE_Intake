@@ -4,20 +4,11 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="589.0" fitWidth="1026.0" layoutX="-13.0" layoutY="-2.0" pickOnBounds="true" smooth="false">
-         <image>
-            <Image url="@../assets/blue_abstract_background_310971.jpg" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#597997" height="42.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="1014.0" />
       <Label layoutX="37.0" layoutY="15.0" text="Add new Student" textFill="#ffc3c3">
          <font>
             <Font name="System Bold" size="25.0" />
@@ -48,7 +39,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <FontAwesomeIconView fx:id="homeId" fill="#d06060" glyphName="HOME" layoutX="933.0" layoutY="543.0" onMouseClicked="#backToHomeOnAction" size="50" />
       <JFXTextField fx:id="txtStudentId" layoutX="244.0" layoutY="108.0" prefHeight="31.0" prefWidth="254.0" />
       <JFXTextField fx:id="txtStudentName" layoutX="246.0" layoutY="161.0" prefHeight="31.0" prefWidth="254.0" />
       <JFXTextField fx:id="txtStudentAddress" layoutX="246.0" layoutY="325.0" prefHeight="31.0" prefWidth="254.0" />
